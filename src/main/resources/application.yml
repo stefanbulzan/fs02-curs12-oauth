@@ -1,0 +1,29 @@
+server:
+  port: 3000
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    com.auth0.example: TRACE
+    org:
+      springframework:
+        security:
+          web:
+            FilterChainProxy: DEBUG
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: Fyo3Nv68limNIOEYmqYeITVv4j2vgSgh
+            client-secret: 418PJF-zpZla52D3HcwN6PWAvFHYh_knmU6z7eKbXh1V5x9MablRaApwqDSv4v9Q
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          auth0:
+            # trailing slash is important!
+            issuer-uri: https://dev-z1gwzted.us.auth0.com/
